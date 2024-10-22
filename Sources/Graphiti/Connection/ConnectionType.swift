@@ -35,6 +35,7 @@ public final class ConnectionType<
             as: name + "Connection"
         ) {
             Field("edges", at: \.edges)
+            Field("nodes", at: \.nodes)
             Field("pageInfo", at: \.pageInfo)
         }
 

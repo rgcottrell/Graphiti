@@ -5,6 +5,9 @@ import NIO
 public struct Connection<Node> {
     public let edges: [Edge<Node>]
     public let pageInfo: PageInfo
+    public var nodes: [Node] {
+        edges.map { $0.node }
+    }
 }
 
 @available(macOS 10.15, macCatalyst 13.0, iOS 13.0, tvOS 13, watchOS 6.0, *) // For Identifiable
